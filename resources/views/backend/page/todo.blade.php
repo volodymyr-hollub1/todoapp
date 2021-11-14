@@ -58,9 +58,12 @@
                     <div class="form-group">
                         <span class="text-primary">@include('layouts.profile_icon') {{ auth()->user()->username }}</span>
                     </div>
-                    <div class="form-group">
-                        <a class="btn btn-primary" href="{{ route('logout') }}">Log out</a>
-                    </div>
+                    <form class="logout" method="post" action="{{ route('logout') }}">
+                        <div class="form-group">
+                            @csrf
+                            <button type="submit" class="btn btn-primary">Log out</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -96,7 +96,9 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-    'admin_email' => env('MAIL_ADMIN_ADDRESS'),
+    'to' => [
+        'admin_email' => env('MAIL_ADMIN_EMAIL', 'admiasdxan@mail.com'),
+    ],
 
     /*
     |--------------------------------------------------------------------------

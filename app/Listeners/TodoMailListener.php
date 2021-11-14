@@ -28,6 +28,6 @@ class TodoMailListener implements SQ
      */
     public function handle(TodoMailEvent $event)
     {
-        Mail::to(config())->send(new TodoMail($event->data->username, $event->data->todo));
+        Mail::to(config('mail.to.admin_email'))->send(new TodoMail($event->data->username, $event->data->todo));
     }
 }
